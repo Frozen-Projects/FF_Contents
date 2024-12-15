@@ -17,15 +17,25 @@ class FF_CONTENTS_API USampleWidgetCpp : public UUserWidget
 	
 public:	
 
+	virtual void NativePreConstruct() override;
 	virtual void NativeConstruct() override;
+	virtual void NativeDestruct() override;
+	virtual void NativeTick(const FGeometry& MyGeometry, float InDeltaTime) override;
+	virtual TSharedRef<SWidget> RebuildWidget() override;
 
 	// You need to open "Show Inherited Variables" to show it in "Variables" section.
-	
-	// "BindWidgetOptional" means, you don't have to add this widget in UMG blueprints.
-	UPROPERTY(BlueprintReadWrite, meta = (BindWidgetOptional))
-	UTextBlock* Text_Optional = nullptr;
+
+	UPROPERTY(BlueprintReadWrite, meta = (BindWidget))
+	UCanvasPanel* CanvasPanel = nullptr;
 
 	// "BindWidget" means, you have to add this widget in UMG blueprints.
 	UPROPERTY(BlueprintReadWrite, meta = (BindWidget))
 	UTextBlock* Text_Must = nullptr;
+
+	// "BindWidgetOptional" means, you don't have to add this widget in UMG blueprints.
+	UPROPERTY(BlueprintReadWrite, meta = (BindWidgetOptional))
+	UTextBlock* Text_Optional = nullptr;
+
+
+
 };
