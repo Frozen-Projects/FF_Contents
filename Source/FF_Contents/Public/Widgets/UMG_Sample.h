@@ -29,13 +29,11 @@ public:
 	UCanvasPanel* CanvasPanel = nullptr;
 
 	// "BindWidget" means, you have to add this widget in UMG blueprints.
-	UPROPERTY(BlueprintReadWrite, meta = (BindWidget))
+	UPROPERTY(BlueprintReadWrite, Category = "Frozen Forest|Contents|Slice Widget", meta = (BindWidget))
 	UTextBlock* Text_Must = nullptr;
 
 	// "BindWidgetOptional" means, you don't have to add this widget in UMG blueprints.
-	UPROPERTY(BlueprintReadWrite, meta = (BindWidgetOptional))
+	UPROPERTY(BlueprintReadWrite, Category = "Frozen Forest|Contents|Slice Widget", meta = (BindWidgetOptional))
 	UTextBlock* Text_Optional = nullptr;
-
-
 
 };

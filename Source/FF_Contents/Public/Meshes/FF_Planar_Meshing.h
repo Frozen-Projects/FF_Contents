@@ -35,10 +35,10 @@ public:
 	// Called every frame.
 	virtual void Tick(float DeltaTime) override;
 
-	UFUNCTION(BlueprintCallable, Category = "Frozen Forest|FF Contents|Planar Grid")
+	UFUNCTION(BlueprintCallable, Category = "Frozen Forest|Contents|Planar Grid")
 	bool Grid_Generate(TArray<FTransform>& Out_Vertices, USplineComponent* BoundarySpline, FVector Size = FVector(0.1), double GridSize = 100, int32 Layer = 1, double Height = 10);
 
-	UFUNCTION(BlueprintCallable, Category = "Frozen Forest|FF Contents|Planar Grid")
+	UFUNCTION(BlueprintCallable, Category = "Frozen Forest|Contents|Planar Grid")
 	void Grid_Debug(FVector Point, bool bInside, bool bIsPersistant, double Time = 10);
 
 };

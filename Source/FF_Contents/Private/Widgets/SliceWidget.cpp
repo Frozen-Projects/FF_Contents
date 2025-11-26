@@ -216,14 +216,14 @@ FReply SSlateSlice::OnMouseMove(const FGeometry& MyGeometry, const FPointerEvent
 {
 	if (!ParentBuffer)
 	{
-		FReply::Unhandled();
+		return FReply::Unhandled();
 	}
 
 	USliceWidget* ParentWidget = Cast<USliceWidget>((USliceWidget*)this->ParentBuffer);
 
 	if (!IsValid(ParentWidget))
 	{
-		FReply::Unhandled();
+		return FReply::Unhandled();
 	}
 
 	return this->CallbackCursorHit(MyGeometry, MouseEvent, ParentWidget->Delegate_Mouse_Move);
@@ -233,14 +233,14 @@ FReply SSlateSlice::OnMouseButtonDown(const FGeometry& MyGeometry, const FPointe
 {
 	if (!ParentBuffer)
 	{
-		FReply::Unhandled();
+		return FReply::Unhandled();
 	}
 
 	USliceWidget* ParentWidget = Cast<USliceWidget>((USliceWidget*)this->ParentBuffer);
 
 	if (!IsValid(ParentWidget))
 	{
-		FReply::Unhandled();
+		return FReply::Unhandled();
 	}
 
 	return this->CallbackCursorHit(MyGeometry, MouseEvent, ParentWidget->Delegate_Mouse_Down);

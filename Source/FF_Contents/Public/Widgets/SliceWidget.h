@@ -64,37 +64,37 @@ public:
 	virtual void SynchronizeProperties() override;
 	virtual void ReleaseSlateResources(bool bReleaseChildren) override;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Appearance")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Frozen Forest|Contents|Slice Widget")
 	FSlateBrush Brush;
 
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Appearance", meta = (ClampMin = "0", ClampMax = "360"))
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Frozen Forest|Contents|Slice Widget", meta = (ClampMin = "0", ClampMax = "360"))
 	double Angle = 0;
 
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Appearance", meta = (ClampMin = "0", ClampMax = "360"))
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Frozen Forest|Contents|Slice Widget", meta = (ClampMin = "0", ClampMax = "360"))
 	double ArcSize = 0;
 	
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Appearance", meta = (ClampMin = "0.5", ClampMax = "10"))
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Frozen Forest|Contents|Slice Widget", meta = (ClampMin = "0.5", ClampMax = "10"))
 	double Smoothness = 0.5;
 
-	UPROPERTY(BlueprintAssignable)
+	UPROPERTY(BlueprintAssignable, Category = "Frozen Forest|Contents|Slice Widget")
 	FDelegateSlice Delegate_Mouse_Move;
 
-	UPROPERTY(BlueprintAssignable)
+	UPROPERTY(BlueprintAssignable, Category = "Frozen Forest|Contents|Slice Widget")
 	FDelegateSlice Delegate_Mouse_Down;
 
-	UFUNCTION(BlueprintCallable, Category = "Appearance")
+	UFUNCTION(BlueprintCallable, Category = "Frozen Forest|Contents|Slice Widget")
 	void SetAngle(double InAngle);
 
-	UFUNCTION(BlueprintCallable, Category = "Appearance")
+	UFUNCTION(BlueprintCallable, Category = "Frozen Forest|Contents|Slice Widget")
 	void SetArcSize(double InArcSize);
 
-	UFUNCTION(BlueprintCallable, Category = "Appearance")
+	UFUNCTION(BlueprintCallable, Category = "Frozen Forest|Contents|Slice Widget")
 	void SetSmoothness(double InSmoothness);
 
-	UFUNCTION(BlueprintCallable, Category = "Appearance")
+	UFUNCTION(BlueprintCallable, Category = "Frozen Forest|Contents|Slice Widget")
 	void SetParent();
 
-	UFUNCTION(BlueprintCallable, Category = "FF_Contents|Slice Widget")
+	UFUNCTION(BlueprintCallable, Category = "Frozen Forest|Contents|Slice Widget")
 	virtual bool IsMouseOnPie(const FGeometry& MyGeometry, const FPointerEvent& MouseEvent);
 
 #if WITH_EDITOR

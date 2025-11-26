@@ -15,7 +15,7 @@ class UFF_ContentsBPLibrary : public UBlueprintFunctionLibrary
 {
 	GENERATED_UCLASS_BODY()
 
-	UFUNCTION(BlueprintPure, meta = (DisplayName = "Int32 To Graphics", ToolTip = "Unit Value gives scale as a float between 0 and 1.", Keywords = "int32, graphics, pie"), Category = "FF_Contents|Charts")
+	UFUNCTION(BlueprintPure, meta = (DisplayName = "Int32 To Graphics", ToolTip = "Unit Value gives scale as a float between 0 and 1.", Keywords = "int32, graphics, pie"), Category = "Frozen Forest|Contents|Charts")
 	static FF_CONTENTS_API void Int32ToGraphics(EChartType GraphicsType, int32 TargetInteger, int32 FullInteger, double& Scale, double& UnitValue);
 
 };
